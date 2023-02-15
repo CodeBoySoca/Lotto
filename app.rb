@@ -11,14 +11,23 @@ class Lotto < Sinatra::Base
     require './models/projects'
 
     get '/' do
-      haml :index, :escape_html => false
+      erb :index, :escape_html => false
     end
 
     get '/project' do
-      haml :project, :escape_html => false
+      erb :project, :escape_html => false
+    end
+
+    post '/project' do
+        
+       erb :project, :escape_html => false
+    end
+
+    get '/get/project' do
+      erb :project, :escape_html => false
     end
 
     get '/history' do
-      haml :history, :escape_html => false
+      erb :history, :escape_html => false
     end
 end

@@ -2,6 +2,8 @@ require 'sinatra'
 require 'rubygems'
 require 'haml'
 
+
+
 require 'bundler/setup'
 Bundler.require
 

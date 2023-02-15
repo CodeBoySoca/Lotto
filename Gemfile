@@ -7,3 +7,5 @@ gem 'json'
 gem 'i18n',  '~> 1.10.0'
 gem 'tzinfo', '~> 2.0.4'
 gem 'pg', '~> 1.4', '>= 1.4.5'
+gem 'rerun'
+

@@ -1,0 +1,26 @@
+<% if request.path_info == '/get/project'  %>
+ <% if @projects %>  
+    <% @projects.each do |project| %>
+        <p><%= project %></p>
+    <% end %>
+ <% else %>
+    <h3>No Projects Added<h3>
+    <p>Looks like you have no projects added. Get started adding projects <a href="/project">here</a></p>
+ <% end %> 
+<% else %>
+  <div id="container">
+  <h1>Add Project</h1>
+  <form method="post">
+     <input type="text" name="name" placeholder=" Anonymous or your name"><br>
+     <input type="text" name="title" placeholder=" Title" required><br>
+     <select name="project-type">
+       <option value="">Web</option>
+       <option value="">Mobile</option>
+        <option value="">Game</option>
+        <option value="">Experimental</option>
+     </select><br>
+     <textarea name="" placeholder="Description" required></textarea><br>
+     <input type="submit" value="Add Project">
+  </form>
+</div>
+<% end%>
